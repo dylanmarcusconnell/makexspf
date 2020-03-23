@@ -14,7 +14,7 @@ QMAKEPLAYLIST='\{print\"\<track\>\"print\"\<location\>\"\$0\"\</location\>\"prin
 
 QMAKETAIL='\{lineno=\$0for\(i=0\;i\<=lineno\;i++\)\{print\"\<vlc:itemtid=\\\"\"i\"\\\"/\>\"\}\}END\{print\"\</extension\>\"print\"\</playlist\>\"\}'
 
-## MAKE HEADER - NOT QUOTED
+## MAKE HEADER - NOT QUOTED - Removed title functionality for now.
 MAKEHEAD='BEGIN	{
 	print "<?xml version="1.0" encoding="UTF-8"?>"
 	print "<playlist xmlns=\"http://xspf.org/ns/0/\" xmlns:vlc=\"http://www.videolan.org/vlc/playlist/ns/0/\" version=\"1\">"
@@ -24,17 +24,17 @@ MAKEHEAD='BEGIN	{
 	lgth = lg - start
 	title = substr($0, start, lgth)
 	titlecaps = toupper(title)
-	print "	<title>" titlecaps "</title>"
+	print "	<title>Playlist</title>"
 	print "	<trackList>"
 	}'
 
 ## MAKE LIST - NOT QUOTED
-MAKELIST='/\<a class="stealth download\-pill" href="\/download.*220k\.mp4/ {
+MAKELIST='/\<a class="stealth download\-pill" href="\/download.*0k\.mp4/ { 
      tolngth = length($0) - 1
      lnkpos = 58
      lnklngth = tolngth - lnkpos
      link = substr($0, lnkpos, lnklngth)
-     print "https://archive.org" link
+     if ($0 ~ ENC) { print "https://archive.org" link }
      }'
 
 ## MAKE PLAYLIST - NOT QUOTED
@@ -52,10 +52,10 @@ print "	<extension application=\"http://www.videolan.org/vlc/playlist/0\">"
 }'
 
 ## MAKE TAIL - NOT QUOTED
-MAKETAIl='{
-lineno = $0
+MAKETAIL='{
+lineno = $0 + 1
 
-for (i=0; i<=lineno; i++) {
+for (i=1; i<=lineno; i++) {
     print "		<vlc:item tid=\"" i "\"/>"
     }
 }
@@ -68,12 +68,21 @@ END {
 
 
 ## BEGIN CODE
-
-wget -qO- $1 | gawk -b "$MAKEHEAD" > $2
-wget -qO- $1 | gawk -b "$MAKELIST" | gawk -b "$MAKEPLAYLIST" >> $2
-wget -qO- $1 | gawk -b "$MAKELIST" | wc -l | gawk -b "$MAKETAIL" >> $2
-
-## IT FUCKING WORKS
+WEBSITE=$(wget -qO- $1)
+echo "$WEBSITE" | gawk -b "$MAKEHEAD" > $2
+## wget -qO- $1 | gawk -b "$MAKELIST" | gawk -b "$MAKEPLAYLIST" >> $2
+TWOK=$(wget -qO- $1 | gawk -v ENC="220k" -b "$MAKELIST")
+THREEK=$(wget -qO- $1 | gawk -v ENC="300k" -b "$MAKELIST")
+TWOKL=$(echo "$TWOK" | wc -l)
+THREEKL=$(echo "$THREEK" | wc -l)
+if [ $TWOKL -gt $THREEKL ]
+    then
+        LIST=$TWOK
+    else
+        LIST=$THREEK
+fi
+echo "$LIST" | gawk -b "$MAKEPLAYLIST" >> $2
+echo "$LIST" | wc -l | gawk -b "$MAKETAIL" >> $2
 
 #unit test
 #echo "'$MAKEHEAD'"
