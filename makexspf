@@ -16,14 +16,8 @@ QMAKETAIL='\{lineno=\$0for\(i=0\;i\<=lineno\;i++\)\{print\"\<vlc:itemtid=\\\"\"i
 
 ## MAKE HEADER - NOT QUOTED - Removed title functionality for now.
 MAKEHEAD='BEGIN	{
-	print "<?xml version="1.0" encoding="UTF-8"?>"
+	print "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 	print "<playlist xmlns=\"http://xspf.org/ns/0/\" xmlns:vlc=\"http://www.videolan.org/vlc/playlist/ns/0/\" version=\"1\">"
-	} /\<meta property="og:title" content=/ {
-	start = 57
-	lg = length($0)
-	lgth = lg - start
-	title = substr($0, start, lgth)
-	titlecaps = toupper(title)
 	print "	<title>Playlist</title>"
 	print "	<trackList>"
 	}'
@@ -44,6 +38,7 @@ MAKEPLAYLIST='{
 	print "			<extension application=\"http://www.videolan.org/vlc/playlist/0\">"
 	print "				<vlc:id>" NR "</vlc:id>"
 	print "				<vlc:option>network-caching=1000</vlc:option>"
+	print "			</extension>"
 	print "		</track>"
 	}
 END {
