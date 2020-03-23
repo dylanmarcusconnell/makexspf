@@ -1,0 +1,216 @@
+<?xml version=1 encoding=-8?>
+<playlist xmlns="http://xspf.org/ns/0/" xmlns:vlc="http://www.videolan.org/vlc/playlist/ns/0/" version="1">
+	<title>"MIT 18.02 MULTIVARIABLE CALCULUS, FALL 2007 : MIT OPENCOURSEWARE : FREE DOWNLOAD, BORROW, AND STREAMING : INTERNET ARCHIVE"</title>
+	<trackList>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec01_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>1</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec02_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>2</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec03_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>3</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec04_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>4</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec05_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>5</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec06_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>6</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec07_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>7</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec08_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>8</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec09_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>9</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec10_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>10</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec11_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>11</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec12_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>12</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec13_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>13</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec14_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>14</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec15_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>15</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec16_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>16</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec17_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>17</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec18_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>18</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec19_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>19</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec20_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>20</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec21_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>21</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec22_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>22</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec23_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>23</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec24_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>24</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec25_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>25</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec26_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>26</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec27_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>27</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec28_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>28</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec29_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>29</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec30_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>30</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec31_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>31</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec32_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>32</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec33_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>33</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec34_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>34</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+		<track>
+			<location>https://archive.org/download/MIT18.02F07/ocw-18_02-f07-lec35_220k.mp4</location>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>35</vlc:id>
+				<vlc:option>network-caching=1000</vlc:option>
+		</track>
+	</trackList>
+	<extension application="http://www.videolan.org/vlc/playlist/0">

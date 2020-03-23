@@ -1,0 +1,79 @@
+#!/bin/bash
+if test -z $1
+	then
+		echo "URL is empty"
+		exit 1
+fi
+
+## BEGIN DATA
+QMAKEHEAD='BEGIN\{print\"\<\?xmlversion=\"1.0\"encoding=\"UTF-8\"\?\>\"print\"\<playlistxmlns=\\\"http://xspf.org/ns/0/\\\"xmlns:vlc=\\\"http://www.videolan.org/vlc/playlist/ns/0/\\\"version=\\\"1\\\"\>\"\}/\\\<metaproperty=\"og:title\"content=/\{start=57lg=length\(\$0\)lgth=lg-starttitle=substr\(\$0\,start\,lgth\)titlecaps=toupper\(title\)print\"\<title\>\"titlecaps\"\</title\>\"print\"\<trackList\>\"\}'
+
+QMAKELIST='/\\\<aclass=\"stealthdownload\\-pill\"href=\"\\/download.\*220k\\.mp4/\{tolngth=length\(\$0\)-1lnkpos=58lnklngth=tolngth-lnkposlink=substr\(\$0\,lnkpos\,lnklngth\)print\"https://archive.org\"link\}'
+
+QMAKEPLAYLIST='\{print\"\<track\>\"print\"\<location\>\"\$0\"\</location\>\"print\"\<extensionapplication=\\\"http://www.videolan.org/vlc/playlist/0\\\"\>\"print\"\<vlc:id\>\"NR\"\</vlc:id\>\"print\"\<vlc:option\>network-caching=1000\</vlc:option\>\"print\"\</track\>\"\}END\{print\"\</trackList\>\"print\"\<extensionapplication=\\\"http://www.videolan.org/vlc/playlist/0\\\"\>\"\}'
+
+QMAKETAIL='\{lineno=\$0for\(i=0\;i\<=lineno\;i++\)\{print\"\<vlc:itemtid=\\\"\"i\"\\\"/\>\"\}\}END\{print\"\</extension\>\"print\"\</playlist\>\"\}'
+
+## MAKE HEADER - NOT QUOTED
+MAKEHEAD='BEGIN	{
+	print "<?xml version="1.0" encoding="UTF-8"?>"
+	print "<playlist xmlns=\"http://xspf.org/ns/0/\" xmlns:vlc=\"http://www.videolan.org/vlc/playlist/ns/0/\" version=\"1\">"
+	} /\<meta property="og:title" content=/ {
+	start = 57
+	lg = length($0)
+	lgth = lg - start
+	title = substr($0, start, lgth)
+	titlecaps = toupper(title)
+	print "	<title>" titlecaps "</title>"
+	print "	<trackList>"
+	}'
+
+## MAKE LIST - NOT QUOTED
+MAKELIST='/\<a class="stealth download\-pill" href="\/download.*220k\.mp4/ {
+     tolngth = length($0) - 1
+     lnkpos = 58
+     lnklngth = tolngth - lnkpos
+     link = substr($0, lnkpos, lnklngth)
+     print "https://archive.org" link
+     }'
+
+## MAKE PLAYLIST - NOT QUOTED
+MAKEPLAYLIST='{
+	print "		<track>"
+	print "			<location>" $0 "</location>"
+	print "			<extension application=\"http://www.videolan.org/vlc/playlist/0\">"
+	print "				<vlc:id>" NR "</vlc:id>"
+	print "				<vlc:option>network-caching=1000</vlc:option>"
+	print "		</track>"
+	}
+END {
+print "	</trackList>"
+print "	<extension application=\"http://www.videolan.org/vlc/playlist/0\">"
+}'
+
+## MAKE TAIL - NOT QUOTED
+MAKETAIl='{
+lineno = $0
+
+for (i=0; i<=lineno; i++) {
+    print "		<vlc:item tid=\"" i "\"/>"
+    }
+}
+
+END {
+    print "	</extension>"
+    print "</playlist>"
+    }'
+## END DATA
+
+
+## BEGIN CODE
+
+wget -qO- $1 | gawk -b "$MAKEHEAD" > $2
+wget -qO- $1 | gawk -b "$MAKELIST" | gawk -b "$MAKEPLAYLIST" >> $2
+wget -qO- $1 | gawk -b "$MAKELIST" | wc -l | gawk -b "$MAKETAIL" >> $2
+
+## IT FUCKING WORKS
+
+#unit test
+#echo "'$MAKEHEAD'"
